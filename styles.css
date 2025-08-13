@@ -174,3 +174,81 @@ input::placeholder, textarea::placeholder{ color: var(--muted) }
   .badges{ flex-wrap: wrap }
   .grid.cards{ grid-template-columns: 1fr }
 }
+/* Make hero image responsive */
+.clinic-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Hero grid adjustment for small screens */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .hero-text {
+    order: 2;
+  }
+  .hero-media {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .badges {
+    justify-content: center;
+  }
+}
+
+/* Cards and About section for small screens */
+@media (max-width: 600px) {
+  .grid.cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .profile-card .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .carousel {
+    gap: 12px;
+  }
+}
+
+/* Contact map responsive */
+.contact-grid iframe,
+.contact-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Modal adjustments */
+.modal-card {
+  width: 95%;
+  max-width: 680px;
+  padding: 16px;
+}
+
+/* Nav links spacing for small phones */
+@media (max-width: 480px) {
+  nav a {
+    margin: 6px 0;
+  }
+  .cta button, .cta a {
+    width: 100%;
+  }
+}
